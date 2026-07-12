@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maqueta Landing Page</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- =========================================================
+       HERO: incluye el Navbar (8% de la pantalla) + imagen y
+       texto principal con dos botones CTA (92% restante)
+  ========================================================== -->
+  <header class="hero">
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <p>Logo</p>
+      </div>
+
+      <ul class="nav-menu">
+        <li><a href="#filosofia">Filosofía</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#soluciones">Soluciones</a></li>
+      </ul>
+
+      <button class="btn btn-primary nav-cta">Contáctanos</button>
+
+      <!-- Botón hamburguesa (visible solo en móvil) -->
+      <button class="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+    <!-- Fondo oscuro que aparece cuando el menú móvil está abierto -->
+    <div class="nav-overlay"></div>
+
+    <!-- ===== CONTENIDO DEL HERO: texto + imagen ===== -->
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Transformando ideas en <span>excelencia digital</span></h1>
+        <p>
+          Creamos soluciones de software escalables y de alto rendimiento que
+          impulsan el crecimiento, enganchan usuarios y generan un impacto real.
+        </p>
+        <div class="cta-buttons">
+          <button class="btn btn-primary">Ver proyectos</button>
+          <button class="btn btn-outline">Conócenos</button>
+        </div>
+      </div>
+
+      <div class="hero-image box pastel-purple">
+        <p>Imagen / ilustración principal</p>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       SECCIÓN: NUESTRA FILOSOFÍA
+       Grid de 4 columnas x 1 fila (calidad, escalabilidad, etc.)
+  ========================================================== -->
+  <section class="section filosofia" id="filosofia">
+    <h2 class="section-title">Nuestra filosofía</h2>
+    <p class="section-subtitle">Los pilares que guían cada proyecto que construimos</p>
+
+    <div class="grid-4">
+      <div class="box pastel-pink">
+        <p>Calidad</p>
+      </div>
+      <div class="box pastel-blue">
+        <p>Escalabilidad</p>
+      </div>
+      <div class="box pastel-green">
+        <p>Innovación</p>
+      </div>
+      <div class="box pastel-yellow">
+        <p>Compromiso</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SECCIÓN: SERVICIOS
+       Grid de 4 columnas x 1 fila
+  ========================================================== -->
+  <section class="section servicios" id="servicios">
+    <h2 class="section-title">Servicios</h2>
+    <p class="section-subtitle">Soluciones a la medida de tu negocio</p>
+
+    <div class="grid-4">
+      <div class="box pastel-mint">
+        <p>Desarrollo Web</p>
+      </div>
+      <div class="box pastel-salmon">
+        <p>Apps Móviles</p>
+      </div>
+      <div class="box pastel-purple">
+        <p>Apps de Escritorio</p>
+      </div>
+      <div class="box pastel-peach">
+        <p>Diseño UX/UI</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SECCIÓN: PROYECTOS
+       Tarjetas apiladas (sticky) que suben y se sobreponen al
+       hacer scroll. Padding lateral especial de 4%.
+  ========================================================== -->
+  <section class="section proyectos" id="proyectos">
+    <h2 class="section-title">Proyectos</h2>
+    <p class="section-subtitle">Algunos de nuestros trabajos recientes</p>
+
+    <div class="cards-stack">
+
+      <!-- Tarjeta de proyecto 1 -->
+      <article class="project-card">
+        <div class="card-col box pastel-blue">
+          <p>Imagen del proyecto 1</p>
+        </div>
+        <div class="card-col box pastel-pink">
+          <p>Descripción del proyecto 1</p>
+        </div>
+      </article>
+
+      <!-- Tarjeta de proyecto 2 -->
+      <article class="project-card">
+        <div class="card-col box pastel-green">
+          <p>Imagen del proyecto 2</p>
+        </div>
+        <div class="card-col box pastel-yellow">
+          <p>Descripción del proyecto 2</p>
+        </div>
+      </article>
+
+      <!-- Tarjeta de proyecto 3 -->
+      <article class="project-card">
+        <div class="card-col box pastel-mint">
+          <p>Imagen del proyecto 3</p>
+        </div>
+        <div class="card-col box pastel-peach">
+          <p>Descripción del proyecto 3</p>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SECCIÓN: SOBRE NOSOTROS
+       Fondo sólido a todo lo ancho, contenido en 2 columnas con
+       padding-x del 7% únicamente en el contenido.
+  ========================================================== -->
+  <section class="sobre-nosotros" id="nosotros">
+    <div class="sobre-nosotros-content two-columns">
+      <div class="column-text">
+        <h2 class="section-title light">Sobre nosotros</h2>
+        <p>
+          Somos un equipo apasionado por la tecnología, dedicado a construir
+          productos digitales que resuelven problemas reales. Combinamos
+          diseño, estrategia e ingeniería para llevar tus ideas al siguiente
+          nivel, acompañándote en cada etapa del proceso.
+        </p>
+      </div>
+      <div class="column-image box pastel-purple">
+        <p>Imagen sobre nosotros</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SECCIÓN: SOLUCIONES TECNOLÓGICAS EN GUATEMALA
+       2 columnas: rectángulo (imagen) + texto
+  ========================================================== -->
+  <section class="section soluciones" id="soluciones">
+    <div class="two-columns">
+      <div class="column-image box pastel-blue">
+        <p>Imagen / mapa de Guatemala</p>
+      </div>
+      <div class="column-text">
+        <h2 class="section-title">Soluciones tecnológicas en Guatemala</h2>
+        <p>
+          Acompañamos a empresas guatemaltecas en su transformación digital,
+          ofreciendo soporte cercano, tiempos de respuesta rápidos y
+          soluciones adaptadas a la realidad del mercado local.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       FOOTER: misma estructura que la referencia
+       (Contacto / Enlaces rápidos / Servicios / Información de contacto)
+  ========================================================== -->
+  <footer class="footer">
+    <div class="footer-top">
+
+      <div class="footer-col footer-cta">
+        <h3>Trabajemos juntos</h3>
+        <p>¿Listo para llevar tu negocio al siguiente nivel? Estamos aquí para ayudarte a lograrlo.</p>
+        <button class="btn btn-primary">Contáctanos</button>
+      </div>
+
+      <div class="footer-col">
+        <h4>Enlaces rápidos</h4>
+        <ul>
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#nosotros">Sobre nosotros</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
+          <li><a href="#">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Servicios</h4>
+        <ul>
+          <li><a href="#">Estrategia de negocio</a></li>
+          <li><a href="#">Asesoría financiera</a></li>
+          <li><a href="#">Consultoría IT</a></li>
+          <li><a href="#">Investigación de mercado</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Información de contacto</h4>
+        <ul class="contact-list">
+          <li>Zona 10, Ciudad de Guatemala</li>
+          <li>+502 1234 5678</li>
+          <li>info@empresa.com</li>
+          <li>www.empresa.com</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Empresa. Todos los derechos reservados.</p>
+      <div class="social-icons">
+        <div class="box pastel-pink icon-box"><p>f</p></div>
+        <div class="box pastel-blue icon-box"><p>x</p></div>
+        <div class="box pastel-green icon-box"><p>in</p></div>
+        <div class="box pastel-yellow icon-box"><p>ig</p></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
