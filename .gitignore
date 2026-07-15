@@ -1,0 +1,39 @@
+# ===== Claude Code =====
+.claude/
+CLAUDE.md
+CLAUDE.local.md
+.mcp.json
+
+# ===== Sistema operativo =====
+.DS_Store
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ===== Editores / IDEs =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ===== Node / herramientas de build (por si se agregan a futuro) =====
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+dist/
+build/
+
+# ===== Variables de entorno / secretos =====
+.env
+.env.local
+.env.*.local
+
+# ===== Logs =====
+*.log
+
+# ===== Archivos temporales =====
+*.tmp
+*.bak
