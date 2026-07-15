@@ -13,8 +13,8 @@
 ============================================================= */
 :root {
   /* Colores principales */
-  --color-primary: #6c5ce7;
-  --color-primary-dark: #5847d1;
+  --color-primary: #653390;
+  --color-primary-dark: #904ec4;
   --color-secondary: #00cec9;
 
   /* Textos */
@@ -40,9 +40,11 @@
   --pastel-salmon: #fadbd8;
   --pastel-mint: #d0f0ec;
   --pastel-peach: #fdebd0;
+  --soft-lavender: #dac9e2;
+  --blanquito: #fbfbfb;
 
   /* Layout */
-  --section-padding-x: 7%;
+  --section-padding-x: 9%;
   --cards-padding-x: 4%;
   --navbar-height: 8vh;
   --radius-card: 12px;
@@ -57,7 +59,7 @@ html {
 }
 
 body {
-  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
   color: var(--color-text);
   background-color: var(--color-bg);
   overflow-x: hidden;
@@ -80,29 +82,78 @@ a {
 .box {
   border-radius: 8px;
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  min-height: 120px;
+  padding: 1rem;
+  background-color: var(--color-bg-alt) !important;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.box p {
+  font-weight: 600;
+  color: var(--color-text);
+  opacity: 0.75;
+}
+.box-hero {
+  border-radius: 8px;
+  display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   min-height: 120px;
   padding: 1rem;
 }
-
-.box p {
-  font-weight: 600;
-  color: var(--color-text);
-  opacity: 0.65;
+.box-proyecto-texto {
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: start;
+  min-height: 120px;
+  padding: 1rem 3.5rem;
+  gap: 1.5rem;
+}
+.titulo-proyecto {
+  font-size: 3rem;
+}
+.descripcion-proyecto {
+  font-size: 1.3rem;
 }
 
 /* Colores pastel reutilizables */
-.pastel-pink { background-color: var(--pastel-pink); }
-.pastel-blue { background-color: var(--pastel-blue); }
-.pastel-green { background-color: var(--pastel-green); }
-.pastel-yellow { background-color: var(--pastel-yellow); }
-.pastel-purple { background-color: var(--pastel-purple); }
-.pastel-salmon { background-color: var(--pastel-salmon); }
-.pastel-mint { background-color: var(--pastel-mint); }
-.pastel-peach { background-color: var(--pastel-peach); }
-
+.pastel-pink {
+  background-color: var(--pastel-pink);
+}
+.pastel-blue {
+  background-color: var(--pastel-blue);
+}
+.pastel-green {
+  background-color: var(--pastel-green);
+}
+.pastel-yellow {
+  background-color: var(--pastel-yellow);
+}
+.pastel-purple {
+  background-color: var(--pastel-purple);
+}
+.pastel-salmon {
+  background-color: var(--pastel-salmon);
+}
+.pastel-mint {
+  background-color: var(--pastel-mint);
+}
+.pastel-peach {
+  background-color: var(--pastel-peach);
+}
+.soft-lavender {
+  background-color: var(--soft-lavender);
+}
+.blanquito {
+  background-color: var(--blanquito);
+}
 /* Botones */
 .btn {
   border: none;
@@ -111,7 +162,21 @@ a {
   border-radius: 50px;
   font-size: 1rem;
   font-weight: 600;
-  transition: transform var(--transition-speed), background-color var(--transition-speed);
+  transition:
+    transform var(--transition-speed),
+    background-color var(--transition-speed);
+}
+.btn-proyecto {
+  border: none;
+  cursor: pointer;
+  padding: 0.9rem 1.8rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  transition:
+    transform var(--transition-speed),
+    background-color var(--transition-speed);
 }
 
 .btn:hover {
@@ -133,9 +198,14 @@ a {
   border: 2px solid var(--color-primary);
 }
 
+/* Gráficos y SVGs */
+.graficos-svg {
+  width: 100px;
+}
+
 /* Secciones genéricas: padding lateral del 7% */
 .section {
-  padding: 5rem var(--section-padding-x);
+  padding: 3rem var(--section-padding-x);
 }
 
 .section-title {
@@ -180,6 +250,12 @@ a {
 .two-columns .column-image {
   min-height: 320px;
 }
+.section-title-filosofia {
+  display: none;
+}
+.section-subtitle-filosofia {
+  display: none;
+}
 
 /* =============================================================
    HERO (incluye navbar)
@@ -187,7 +263,11 @@ a {
 .hero {
   width: 100%;
   min-height: 100vh;
-  background-color: var(--color-bg-alt);
+  background-color: var(--color-bg);
+  margin-bottom: -11%;
+}
+.img-proyecto {
+  width: 100%;
 }
 
 /* ---------- NAVBAR: 8% de la altura de pantalla ---------- */
@@ -249,7 +329,9 @@ a {
   width: 100%;
   background-color: var(--color-text);
   border-radius: 2px;
-  transition: transform var(--transition-speed), opacity var(--transition-speed);
+  transition:
+    transform var(--transition-speed),
+    opacity var(--transition-speed);
 }
 
 /* Fondo oscuro tras el menú móvil (oculto por defecto) */
@@ -274,7 +356,7 @@ a {
   padding: 3rem var(--section-padding-x);
   display: flex;
   align-items: center;
-  gap: 3rem;
+  gap: 2rem;
 }
 
 .hero-text {
@@ -304,8 +386,14 @@ a {
 }
 
 .hero-image {
-  flex: 1;
+  flex: 2;
   min-height: 400px;
+}
+
+.hero-image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
 }
 
 /* =============================================================
@@ -315,6 +403,16 @@ a {
   padding-left: var(--cards-padding-x);
   padding-right: var(--cards-padding-x);
   padding-bottom: 8rem;
+}
+
+.box-proyecto {
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 120px;
+  padding: 1rem;
 }
 
 .cards-stack {
@@ -334,9 +432,15 @@ a {
   will-change: transform;
 }
 
-.project-card:nth-child(1) { z-index: 1; }
-.project-card:nth-child(2) { z-index: 2; }
-.project-card:nth-child(3) { z-index: 3; }
+.project-card:nth-child(1) {
+  z-index: 1;
+}
+.project-card:nth-child(2) {
+  z-index: 2;
+}
+.project-card:nth-child(3) {
+  z-index: 3;
+}
 
 .card-col {
   flex: 1;
@@ -444,6 +548,7 @@ a {
 @media (max-width: 992px) {
   .grid-4 {
     grid-template-columns: repeat(2, 1fr);
+    gap: 2.2rem;
   }
 
   .footer-top {
@@ -452,6 +557,45 @@ a {
 
   .hero-text h1 {
     font-size: 2.4rem;
+  }
+  .section-title-filosofia {
+    display: block;
+  }
+  .section-subtitle-filosofia {
+    display: block;
+  }
+}
+
+/* Efecto "liquid glass" en los .box de Filosofía, solo en pantallas grandes
+   (se sobreponen sobre la imagen del hero gracias al margin-bottom negativo de .hero) */
+@media (min-width: 993px) {
+  .filosofia .box {
+    --glass-tint: var(--color-bg-alt);
+    background: linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--glass-tint) 55%, transparent),
+      color-mix(in srgb, var(--glass-tint) 20%, transparent)
+    ) !important;
+    backdrop-filter: blur(18px) saturate(160%);
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow:
+      0 8px 32px rgba(0, 0, 0, 0.15),
+      inset 0 1px 1px rgba(255, 255, 255, 0.6),
+      inset 0 -1px 1px rgba(255, 255, 255, 0.15);
+  }
+
+  .filosofia .box.pastel-pink {
+    --glass-tint: var(--pastel-pink);
+  }
+  .filosofia .box.pastel-blue {
+    --glass-tint: var(--pastel-blue);
+  }
+  .filosofia .box.pastel-green {
+    --glass-tint: var(--pastel-green);
+  }
+  .filosofia .box.pastel-yellow {
+    --glass-tint: var(--pastel-yellow);
   }
 }
 
